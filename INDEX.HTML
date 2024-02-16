@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MSEC Students Club</title>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js"></script>
+
+<!-- Add Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-database.js"></script>
+
+
+  <link rel="stylesheet" href="D:\Krithika\New folder\New folder\STYLE.CSS">
+  <style>
+    #blink
+			{text-decoration:blink;}
+            #myInput		
+            {
+                width:0%;
+                -webkit-transition:width 0.1s ease-in-out;
+            }
+            #myInput:hover,#myInput:focus	
+            {
+                width:100%;
+                -webkit-transition:width 0.3s ease-in-out;
+            }
+    .text-container {
+    flex: 1;
+    font-size: 15px;
+  }
+  .text-container1{
+
+    font-size: 1.2rem;
+    width: 750px;
+    height: 580px;
+    line-height: 1.5;
+  }
+
+  .text-container h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+    .club {
+      background-color: white;
+      padding: 40px;
+      text-align: center;
+      text-size:25px;
+    }
+
+    .contact-box {
+      display: inline-block;
+      width: 250px;
+      height: 180px;
+      background-color: white;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      margin: 20px;
+      text-align: left;
+      padding: 10px;
+      vertical-align: middle;
+      border-radius: 10px;
+    }
+
+    .contact-box h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .contact-box p {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    .contact-box img {
+        float :left;
+      width: 65px;
+      height: 65px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+    .text-container {
+    position: relative;
+    top: 25px;
+    left: 160px;
+  }
+  .square-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background-color: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10%;
+  box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+.content {
+  text-align: center;
+  color: white;
+}
+
+.circular-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.square-container::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  height: 80%;
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.login-button {
+  background-color: rgb(255, 189, 47);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  right: -1425px;
+  position: relative;
+}
+
+
+  </style>
+  
+</head>
+<body>
+    <img src="logomsec.png" alt="MSEC Students Club" WIDTH =1500px id="header-image">
+
+  <div style="width: 1500px; height: 50px; text-align: center;background-color: #ffffff; align-items: center;">
+    <center ><a href="https://forms.gle/5B2eBv85GLwnzxza7" style="font-size:30px; align: center; padding:10px;color:#f90;font-weight:300;" ><span class="blinking"><font face="Bodoni MT" style="text-align: center;"> Admission Enquiry 2024-2025</font></span><img src="newb.gif" width=30 height=15></img></a></center>		
+  </div>
+  <nav class="navbar navbar-default" style="display: flex;position: sticky;">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navBar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+          </div>
+          <div class="collapse navbar-collapse" id="navBar">
+            <ul class="nav navbar-nav"> <!-- Add navbar-nav class here -->
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"> ABOUT US<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="about.html"> Vision and Mission </a></li>
+                  <li><a href="management.html"> Management </a></li>
+                  <li><a href="administration.html"> Administration & Faculty</a></li>
+                  <li><a href="Committees.html"> Statutory Cells/ Committees </a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"> DEPARTMENTS <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="civil.html"> Civil Engineering </a></li>
+                  <li><a href="Computer.html"> Computer Science and Engineering </a></li>
+                  <li><a href="ece.html"> Electronics and Communication Engineering </a></li>
+                  <li><a href="eee.html"> Electrical and Electronics Engineering </a></li>
+                  <li><a href="it.html"> Information Technology </a></li>
+                  <li><a href="mechanical.html"> Mechanical Engineering </a></li>
+                  <li><a href="AI_DS.html"> Artificial Intelliigence and Data Science </a></li>
+                  <li><a href="HS.html"> Humanities and Science </a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"> ADMISSIONS <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="CollegeBrochure.pdf"> Brochure </a></li>
+                  <li><a href="https://forms.gle/5B2eBv85GLwnzxza7">Admission Enquiry</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="whymsec"> WHY MSEC <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="whymsec.html"> Campus Life </a></li>
+                  <li><a href="MoU.html"> Industrial Connect & MoU </a></li>
+                  <li><a href="counselling.html"> Counselling </a></li>
+                  <li><a href="accolades.html"> Accolades </a></li>
+                  <li><a href="lab.html"> Laboratories </a></li>
+                  <li><a href="auditorium.html"> Auditoriums </a></li>
+                  <li><a href="Library.html"> Library </a></li>
+                  <li><a href="gallery.html"> Gallery </a></li>
+                </ul>
+              </li>
+              <li><a href="research.html"> RESEARCH </a></li>
+              <li><a href="placement.html"> PLACEMENT </a></li>
+              <li><a href="coe.html"> COE </a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"> ACCREDITATION <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="AICTE_Approval.pdf"> AICTE Approval </a></li>
+                  <li><a href="AUTONOMOUS.pdf"><font class=blink_me> Autonomous Status <img src="newb.gif" width=30 height=15></img></font> </a></li>
+                  <li><a href="NBA.html"> NBA </a></li>
+                  <li><a href="https://msec.edu.in/NAAC/NAAC.html">NAAC</a></li>
+                  <li><a href="nirf.html"> NIRF </a></li>
+                  <li><a href="ariia.html"> ARIIA </a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"> AWARDS <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="SIH.html"> Student Achievements & Awards</a></li>
+                  <li><a href="JalShaktiAbhiyan.pdf"> AICTE Jal Shakti Abhiyan </a></li>
+                  <li><a href="https://msec.edu.in/AICTECII2020.pdf"> AICTE-CII Ranking</a></li>
+                  <li><a href="https://msec.edu.in/Award.html">Best Engineering College by Mylapore Academy</a></li>
+                  <li><a href="https://msec.edu.in/BestMaintainedCollege.html"> Best Maintained College by South Madras Club</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="">INNOVATE & CREATE <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="AboutIIC.html ">Institution Innovation Council </a></li>
+                  <li><a href="ApplicationProjectGuidance.pdf">Project Guidance - Application </a></li>
+                  <!--<li><a href="CouncilMembers.html "> Coordinators</a></li>-->
+                  <li><a href="Clubs.html">Clubs </a></li>
+                  <li><a href="Events_Activities.html">Events and Activities </a></li>
+                </ul>
+              </li>
+              <li><a href="alumniachiever.html">ALUMNI </a></li>
+              <li><a href="contact.html">CONTACT US </a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+</center>  
+<a href="login.html">
+<button class="login-button">Login</button> 
+</a>
+
+<DIV style="height: 80px;"><h1 style="font-size:  45px;;text-align: center;">MSEC  Students club</h1></DIV>
+  <div style="text-align: center"><img src="club.png"  alt="My Image" /></div>
+  
+  <section style="background-color: #ffffff;  color: white;  padding: 20px; display: flex; justify-content: space-between;">
+
+    <div class="square-container">
+        <a href="dev.html">
+        <div class="content">
+          <img src="D:\Krithika\New folder\WhatsApp Image 2024-02-15 at 09.31.21_fe96733a.jpg" alt="Your Image" class="circular-image">
+          <h2>DEVDYNASTY</h2>
+        </div>
+        </a>
+      </div>
+
+      <div class="square-container" style="background-color: #0ef07b;">
+        <a href="ai.html">
+        <div class="content">
+          <img src="D:\Krithika\msiic\Screenshot 2024-02-13 190339.png" alt="Your Image" class="circular-image">
+          <h2>AI CLUB</h2>
+        </div>
+        </a>
+      </div>
+    
+      <div class="square-container" style="background-color: #6b5b95;">
+        <a href="https://in.search.yahoo.com/search?fr=mcafee&type=E210IN826G0&p=perplexity">
+        <div class="content">
+          <img src="CODING.jpg" alt="Your Image" class="circular-image">
+          <h2>CODING CLUB</h2>
+        </div>
+        </a>
+      </div>
+
+      <div class="square-container" style="background-color: #f18973;">
+        <a href="https://in.search.yahoo.com/search?fr=mcafee&type=E210IN826G0&p=perplexity">
+        <div class="content">
+          <img src="IOT.png" alt="Your Image" class="circular-image">
+          <h2>IOT CLUB</h2>
+        </div>
+        </a>
+      </div>
+
+  </section>
+
+  <section style="background-color: #ffffff;  color: white;  padding: 20px; display: flex; justify-content: space-between;">
+
+    <div class="square-container" style="background-color: #4040a1;">
+        <a href="https://in.search.yahoo.com/search?fr=mcafee&type=E210IN826G0&p=perplexity">
+        <div class="content">
+          <img src="RENEWABLES.jpg" alt="Your Image" class="circular-image">
+          <h2>RENEWABLES CLUB</h2>
+        </div>
+        </a>
+      </div>
+
+      <div class="square-container" style="background-color: #ffef96;">
+        <a href="https://in.search.yahoo.com/search?fr=mcafee&type=E210IN826G0&p=perplexity">
+        <div class="content">
+          <img src="CAD.jpg" alt="Your Image" class="circular-image">
+          <h2>CAD CLUB</h2>
+        </div>
+        </a>
+      </div>
+    
+      <div class="square-container" style="background-color: #d64161;">
+        <a href="https://in.search.yahoo.com/search?fr=mcafee&type=E210IN826G0&p=perplexity">
+        <div class="content">
+          <img src="PROD.png" alt="Your Image" class="circular-image">
+          <h2>PRODUCT DEVELOPMENT CLUB</h2>
+        </div>
+        </a>
+      </div>
+
+  </section>
+
+  
+    <div class="container-fluid">
+      <div class="row" style="background-color: #84aff1; color: #fff; padding: 20px 0;  height: 150px; width: 1500px; align-content: center;" >
+            <div class="col-md-12 text-center" style="align-items: center;">
+                <p style="font-size:35px; color: #251149;">CONTACT INFO</p>
+            <a href="https://www.instagram.com/msec_official_1309/ "><img src="D:\Krithika\New folder\instagram-Logo-PNG-Transparent-Background-download.png" width="55" height="55" class="social-media-icons" alt="Instagram"></a>
+            <a href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Aorganization%3A15249586&keywords=meenakshi%20sundararajan%20engineering%20college&origin=RICH_QUERY_TYPEAHEAD_HISTORY&position=1&searchId=32afbaf0-d76b-4900-b560-0f223c2d38b5&sid=Oxu&spellCorrectionEnabled=true"><img src="D:\Krithika\New folder\LinkedIn-Emblema.png" width="65" height="55" class="social-media-icons" alt="LinkedIn"></a>
+          </div>
+      </div>
+    </div>
+  <script src="app.js"></script>
+  <script src="firebase.js"></script>
+</body>
+</html>

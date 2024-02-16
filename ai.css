@@ -1,0 +1,159 @@
+html, body {
+    height: 100%;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+  
+   }
+  body {
+    
+    background-image: url('D:/replica realm/backgroud1.jpg'); 
+    background-size: cover; /* Cover the entire viewport */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+    background-position: center; /* Center the background image */
+    height: 100%; /* Ensure full height */
+  
+  }
+  .home{
+    height: 100%;
+    margin: 0; /* Remove default margin */
+    padding: 20px; 
+    top:40px;
+    background-color: rgba(2, 39, 119, 0.522); /* Adjust the opacity and color as needed */
+    z-index: -1; /* Ensure the pseudo-element is behind the content */
+  
+  
+  }
+  
+  .navbar {
+    background-color: rgba(2, 66, 119, 32); /* Adjust the opacity and color as needed */
+    display: flex;
+    justify-content: space-between; /* Distribute space between items */
+    align-items: center;
+    margin-top:0;
+    margin-right:0;
+    width: 100%;
+    padding:7px;
+    position: fixed;
+    top: 0; /* Position it at the top of the viewport */
+    left:0;
+    z-index:5;
+  
+    
+  }
+  
+  .navbar .img_container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .img_container img {
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 600px; /* Add some space between the image and other content */
+  }
+  
+  .dropbtn {
+    background-color: transparent;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .navbar .courses {
+    background-color: transparent;
+    margin-right: 10px; /* Add some space between buttons */
+  }
+  
+  .courses:hover .dropdown-content {
+    display: block;
+  }
+  
+  .courses:hover .dropbtn {
+    background-color: #eeeeee;
+    color: rgb(11, 139, 28);
+  }
+  
+  .line {
+    border: none;
+    border-top: 1px solid black;
+    width: 100%;
+  }
+  
+  
+  
+  h4{
+    color: white;
+    margin:0 40px;
+  
+  }
+  .about .aboutbtn {
+    background-color: transparent; /* Transparent background */
+    color: white; /* White text */
+    border: 2px solid blue; /* Blue border */
+    padding: 24px 48px; /* Larger padding for a larger button */
+    font-size: 18px; /* Larger font size */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    margin: 0 40px;
+    margin-top: 40px;
+  }
+  
+  /* Hover effect for the button */
+  .about .aboutbtn:hover {
+    background-color: blue; /* Change background color to blue on hover */
+  }
+  /* Keyframes for sliding animation */
+  /* Keyframes for sliding animation */
+  @keyframes slideInLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  h1.main{
+    /* Keep the color, size, and position consistent */
+    color: white;
+    font-size: 66px;
+    font-family: Sans-serif;
+    margin: 0 40px;
+    /* Prevent wrapping */
+    font-weight: 100;
+    white-space: nowrap;
+    margin-top:200px ;
+    overflow: hidden;;
+  }
+  
+  /* Apply sliding animation to h1 and h4 elements */
+  h1.main1{
+    /* Keep the color, size, and position consistent */
+    color: white;
+    font-size: 66px;
+    margin: 0 40px;
+    font-weight: 100;
+    font-family: Sans-serif;
+    /* Prevent wrapping */
+    white-space: nowrap;
+    /* Hide overflowing text */
+    overflow: hidden;;
+  }
+  
+  /* Apply animation to each letter individually */
+  h1.main span, h1.main1 span{
+    display: inline-block;
+    /* Apply animation */
+    animation: slideInLeft 0.5s forwards;
+    /* Delay each letter's animation */
+    animation-delay: calc(0.1s * var(--index));
+  }
+  
+  /* Reset animation for the first letter */
+  h1.main span:first-child, h1.main1 span:first-child {
+    animation-delay: 0.5s; /* Start animation immediately */
+  }
+  
